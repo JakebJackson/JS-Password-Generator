@@ -99,7 +99,7 @@ function generatePassword() {
   // Logs parameter amount.
   console.log("Amount of parameters being used: " + paramAmount)
 
-  // The following if statements check to see which parameters are true and adds the length of the array to a variable called charactersLength and also adds the array itself to a seperate array called usedCharacters.
+  // The following if statements check to see which parameters are true and adds the array relevant arrays to a seperate array called usedCharacters.
   if (incUpperCase) {
     usedCharacters = usedCharacters.concat(upperCase);
   }
@@ -113,22 +113,30 @@ function generatePassword() {
     usedCharacters = usedCharacters.concat(specialChar);
   }
 
+  // Sets 'charactersLength' variable to the length of the used characters array.
   charactersLength = usedCharacters.length;
   console.log(usedCharacters);
 
+  // New function to choose a character from the array.
   function randomCharacter() {
+    // Sets variable 'random' to a random number between 0 and the length of the array (charactersLength).
     random = Math.floor(Math.random() * charactersLength);
+    // Logs random number.
     console.log("Random number is: " + random);
 
+    // Returns 'usedCharacters' array indexed by the random number, this selects the character used in the password.
     return usedCharacters[random];
   }
 
   // Function for generating the password, will keep generating a random character and adding it to password until the password is as long as the user specified.
   for (var i = 0; i <= passwordLength; i++) {
+    // Adds a random character to password everytime the index is incremented, index is incremented until it is equivalent to 'passwordLength'.
     password = password + randomCharacter();
   }
-  console.log(password);
+  // Logs the password.
+  console.log("Generated password: " + password);
 
+  // What ever is returned from this function will be displayed as the password in the browser, this selects local var 'password' to be returned.
   return password;
 }
 
