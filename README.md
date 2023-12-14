@@ -18,7 +18,7 @@ The project is designed to provide the user with a random password based on the 
 
 ## Mock-Up
 Below is an image of the deployed application:
-![Deployed portfolio website](./assets/images/password-generator.png)
+![Deployed password generator application](./assets/images/password-generator.png)
 
 ## Deployment
-This website has been deployed and can be viewed [here](https://jakebjackson.github.io/JS-Password-Generator/).
+This application has been deployed and can be viewed [here](https://jakebjackson.github.io/JS-Password-Generator/).
